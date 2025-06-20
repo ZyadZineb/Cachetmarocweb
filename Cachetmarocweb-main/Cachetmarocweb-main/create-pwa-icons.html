@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PWA Icon Generator</title>
+</head>
+<body>
+    <canvas id="canvas192" width="192" height="192" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <canvas id="canvas512" width="512" height="512" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <br>
+    <button onclick="downloadIcons()">Download Icons</button>
+
+    <script>
+        // Create 192x192 icon
+        const canvas192 = document.getElementById('canvas192');
+        const ctx192 = canvas192.getContext('2d');
+
+        // Background gradient
+        const gradient192 = ctx192.createLinearGradient(0, 0, 192, 192);
+        gradient192.addColorStop(0, '#004AAD'); // Brand blue
+        gradient192.addColorStop(1, '#0056CC'); // Lighter blue
+        ctx192.fillStyle = gradient192;
+        ctx192.fillRect(0, 0, 192, 192);
+
+        // Add border
+        ctx192.strokeStyle = '#E30613'; // Brand red
+        ctx192.lineWidth = 4;
+        ctx192.strokeRect(2, 2, 188, 188);
+
+        // Add stamp icon
+        ctx192.fillStyle = '#FFFFFF';
+        ctx192.fillRect(60, 60, 72, 72);
+        ctx192.strokeStyle = '#004AAD';
+        ctx192.lineWidth = 2;
+        ctx192.strokeRect(60, 60, 72, 72);
+
+        // Add text
+        ctx192.fillStyle = '#FFFFFF';
+        ctx192.font = 'bold 18px Arial';
+        ctx192.textAlign = 'center';
+        ctx192.fillText('CACHETS', 96, 150);
+        ctx192.fillText('MAROC', 96, 170);
+
+        // Create 512x512 icon
+        const canvas512 = document.getElementById('canvas512');
+        const ctx512 = canvas512.getContext('2d');
+
+        // Background gradient
+        const gradient512 = ctx512.createLinearGradient(0, 0, 512, 512);
+        gradient512.addColorStop(0, '#004AAD'); // Brand blue
+        gradient512.addColorStop(1, '#0056CC'); // Lighter blue
+        ctx512.fillStyle = gradient512;
+        ctx512.fillRect(0, 0, 512, 512);
+
+        // Add border
+        ctx512.strokeStyle = '#E30613'; // Brand red
+        ctx512.lineWidth = 8;
+        ctx512.strokeRect(4, 4, 504, 504);
+
+        // Add stamp icon
+        ctx512.fillStyle = '#FFFFFF';
+        ctx512.fillRect(160, 160, 192, 192);
+        ctx512.strokeStyle = '#004AAD';
+        ctx512.lineWidth = 6;
+        ctx512.strokeRect(160, 160, 192, 192);
+
+        // Add inner stamp details
+        ctx512.strokeStyle = '#E30613';
+        ctx512.lineWidth = 2;
+        for (let i = 0; i < 8; i++) {
+          ctx512.strokeRect(170 + i * 22, 170, 20, 20);
+        }
+
+        // Add text
+        ctx512.fillStyle = '#FFFFFF';
+        ctx512.font = 'bold 48px Arial';
+        ctx512.textAlign = 'center';
+        ctx512.fillText('CACHETS', 256, 400);
+        ctx512.fillText('MAROC', 256, 460);
+
+        function downloadIcons() {
+            // Download 192x192
+            const link192 = document.createElement('a');
+            link192.download = 'pwa-192x192.png';
+            link192.href = canvas192.toDataURL();
+            link192.click();
+
+            // Download 512x512
+            setTimeout(() => {
+                const link512 = document.createElement('a');
+                link512.download = 'pwa-512x512.png';
+                link512.href = canvas512.toDataURL();
+                link512.click();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
