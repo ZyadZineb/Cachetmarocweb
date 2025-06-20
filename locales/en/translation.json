@@ -1,0 +1,112 @@
+
+{
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "design": "Design a Stamp",
+    "contact": "Contact",
+    "cart": "Cart"
+  },
+  "products": {
+    "title": "Our Stamp Collection",
+    "description": "Browse our extensive collection of high-quality stamps from top brands like Trodat, Shiny, MobiStamps and more.",
+    "filters": "Filters",
+    "compareProducts": "Compare products",
+    "cancelComparison": "Cancel comparison",
+    "productsFound": "{{count}} products found",
+    "noProductsFound": "No products found matching your filters.",
+    "clearFilters": "Clear filters",
+    "searchPlaceholder": "Search products..."
+  },
+  "wizard": {
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish",
+    "goToStep": "Go to step",
+    "steps": {
+      "shape": {
+        "label": "Shape",
+        "description": "Choose your stamp shape and border style"
+      },
+      "text": {
+        "label": "Text",
+        "description": "Add and position your text"
+      },
+      "effects": {
+        "label": "Effects",
+        "description": "Add text effects and styling"
+      },
+      "color": {
+        "label": "Color",
+        "description": "Select ink color"
+      },
+      "logo": {
+        "label": "Logo",
+        "description": "Add a logo if needed"
+      },
+      "advanced": {
+        "label": "Tools",
+        "description": "Add QR codes and barcodes"
+      },
+      "preview": {
+        "label": "Preview",
+        "description": "Review your design"
+      }
+    }
+  },
+  "textEffects": {
+    "title": "Text Effects",
+    "effectType": "Effect Type",
+    "selectEffect": "Select effect",
+    "none": "None",
+    "bold": "Bold",
+    "italic": "Italic",
+    "shadow": "Shadow",
+    "outline": "Outline",
+    "effectColor": "Effect Color",
+    "blur": "Blur",
+    "thickness": "Thickness"
+  },
+  "backgrounds": {
+    "title": "Preview Background",
+    "none": "None",
+    "paper": "Paper",
+    "envelope": "Envelope",
+    "cardboard": "Cardboard",
+    "fabric": "Fabric"
+  },
+  "accessibility": {
+    "title": "Accessibility Settings",
+    "highContrast": "High Contrast Mode",
+    "highContrastDesc": "Increases contrast for better visibility",
+    "largeControls": "Large Controls",
+    "largeControlsDesc": "Increases size of buttons and controls",
+    "toggleHighContrast": "Toggle high contrast mode",
+    "toggleLargeControls": "Toggle large controls",
+    "keyboardTip": "Tip: Use arrow keys to move selected elements when focused on the preview area"
+  },
+  "preview": {
+    "title": "Preview",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "download": "Download Preview",
+    "stampPreview": "Stamp Preview",
+    "noPreview": "Preview will appear here",
+    "customizeStamp": "Customize your stamp to see a preview",
+    "physicalSize": "Physical size: {{size}}mm",
+    "dragInstructions": "Click and drag elements to reposition them",
+    "movingText": "Moving text line {{index}}",
+    "movingLogo": "Moving logo",
+    "ariaLabel": "Stamp preview area. Use arrow keys to position elements when selected.",
+    "backgroundChanged": "Background Changed",
+    "backgroundChangedDesc": "Preview background has been updated"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "French"
+  },
+  "common": {
+    "brand": "Cachets Maroc",
+    "currency": "DHS"
+  }
+}

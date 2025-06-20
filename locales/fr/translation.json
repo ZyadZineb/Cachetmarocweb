@@ -1,0 +1,112 @@
+
+{
+  "navigation": {
+    "home": "Accueil",
+    "products": "Produits",
+    "design": "Concevoir un Tampon",
+    "contact": "Contact",
+    "cart": "Panier"
+  },
+  "products": {
+    "title": "Notre Collection de Tampons",
+    "description": "Parcourez notre vaste collection de tampons de haute qualité des meilleures marques comme Trodat, Shiny, MobiStamps et plus.",
+    "filters": "Filtres",
+    "compareProducts": "Comparer les produits",
+    "cancelComparison": "Annuler la comparaison",
+    "productsFound": "{{count}} produits trouvés",
+    "noProductsFound": "Aucun produit ne correspond à vos filtres.",
+    "clearFilters": "Effacer les filtres",
+    "searchPlaceholder": "Rechercher des produits..."
+  },
+  "wizard": {
+    "back": "Retour",
+    "next": "Suivant",
+    "finish": "Terminer",
+    "goToStep": "Aller à l'étape",
+    "steps": {
+      "shape": {
+        "label": "Forme",
+        "description": "Choisissez la forme et le style de bordure"
+      },
+      "text": {
+        "label": "Texte",
+        "description": "Ajoutez et positionnez votre texte"
+      },
+      "effects": {
+        "label": "Effets",
+        "description": "Ajoutez des effets de texte et de style"
+      },
+      "color": {
+        "label": "Couleur",
+        "description": "Sélectionnez la couleur d'encre"
+      },
+      "logo": {
+        "label": "Logo",
+        "description": "Ajoutez un logo si nécessaire"
+      },
+      "advanced": {
+        "label": "Outils",
+        "description": "Ajoutez des codes QR et des codes-barres"
+      },
+      "preview": {
+        "label": "Aperçu",
+        "description": "Examinez votre design"
+      }
+    }
+  },
+  "textEffects": {
+    "title": "Effets de Texte",
+    "effectType": "Type d'Effet",
+    "selectEffect": "Sélectionner un effet",
+    "none": "Aucun",
+    "bold": "Gras",
+    "italic": "Italique",
+    "shadow": "Ombre",
+    "outline": "Contour",
+    "effectColor": "Couleur de l'Effet",
+    "blur": "Flou",
+    "thickness": "Épaisseur"
+  },
+  "backgrounds": {
+    "title": "Arrière-plan d'Aperçu",
+    "none": "Aucun",
+    "paper": "Papier",
+    "envelope": "Enveloppe",
+    "cardboard": "Carton",
+    "fabric": "Tissu"
+  },
+  "accessibility": {
+    "title": "Paramètres d'Accessibilité",
+    "highContrast": "Mode Contraste Élevé",
+    "highContrastDesc": "Augmente le contraste pour une meilleure visibilité",
+    "largeControls": "Grandes Commandes",
+    "largeControlsDesc": "Augmente la taille des boutons et des contrôles",
+    "toggleHighContrast": "Activer/désactiver le mode contraste élevé",
+    "toggleLargeControls": "Activer/désactiver les grandes commandes",
+    "keyboardTip": "Astuce: Utilisez les touches fléchées pour déplacer les éléments sélectionnés lorsque vous êtes dans la zone d'aperçu"
+  },
+  "preview": {
+    "title": "Aperçu",
+    "zoomIn": "Zoom Avant",
+    "zoomOut": "Zoom Arrière",
+    "download": "Télécharger l'Aperçu",
+    "stampPreview": "Aperçu du Tampon",
+    "noPreview": "L'aperçu apparaîtra ici",
+    "customizeStamp": "Personnalisez votre tampon pour voir un aperçu",
+    "physicalSize": "Taille physique: {{size}}mm",
+    "dragInstructions": "Cliquez et faites glisser les éléments pour les repositionner",
+    "movingText": "Déplacement de la ligne de texte {{index}}",
+    "movingLogo": "Déplacement du logo",
+    "ariaLabel": "Zone d'aperçu du tampon. Utilisez les touches fléchées pour positionner les éléments sélectionnés.",
+    "backgroundChanged": "Arrière-plan Modifié",
+    "backgroundChangedDesc": "L'arrière-plan d'aperçu a été mis à jour"
+  },
+  "languages": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "common": {
+    "brand": "Cachets Maroc",
+    "currency": "DHS"
+  }
+}

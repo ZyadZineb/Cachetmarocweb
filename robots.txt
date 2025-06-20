@@ -1,0 +1,23 @@
+
+# Group 1
+User-agent: Googlebot
+Allow: /
+
+# Group 2
+User-agent: Bingbot
+Allow: /
+
+# Group 3
+User-agent: Twitterbot
+Allow: /
+
+# Group 4
+User-agent: facebookexternalhit
+Allow: /
+
+# Default
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://cachets-maroc.com/sitemap.xml
