@@ -53,7 +53,6 @@ export class EnhancedAiDesignService {
         this.userPreferences = JSON.parse(savedPreferences);
       }
     } catch (error) {
-      console.error('Error loading AI preferences:', error);
     }
   }
   
@@ -63,9 +62,7 @@ export class EnhancedAiDesignService {
       // we would load actual models for content analysis
       await tf.ready();
       this.modelLoaded = true;
-      console.log('Enhanced AI design service initialized');
     } catch (error) {
-      console.error('Error initializing AI model:', error);
     }
   }
   
@@ -256,7 +253,6 @@ export class EnhancedAiDesignService {
     try {
       localStorage.setItem('aiDesignPreferences', JSON.stringify(this.userPreferences));
     } catch (error) {
-      console.error('Error saving AI preferences:', error);
     }
   }
   
@@ -418,7 +414,6 @@ export class EnhancedAiDesignService {
         action: {
           apply: () => {
             // No automatic action for this, would require user judgment
-            console.log("This suggestion requires manual user action");
           }
         }
       });

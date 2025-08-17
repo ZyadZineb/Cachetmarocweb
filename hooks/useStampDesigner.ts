@@ -129,12 +129,10 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
   // Add a new text line with proper spacing
   const addLine = useCallback(() => {
     if (!product) {
-      console.error('No product selected');
       return;
     }
 
     if (design.lines.length >= product.lines) {
-      console.log(`Maximum lines reached: ${product.lines}`);
       return;
     }
 
@@ -148,7 +146,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
     // Update state with the new line
     setDesign(currentDesign => {
       const newLines = [...currentDesign.lines, newLine];
-      console.log('Adding line, new count:', newLines.length);
       
       // Redistribute all lines to prevent overlap
       const redistributedLines = redistributeLines(newLines);
@@ -164,7 +161,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
   const updateLine = useCallback((index: number, properties: Partial<StampTextLine>) => {
     setDesign(currentDesign => {
       if (index < 0 || index >= currentDesign.lines.length) {
-        console.error('Invalid line index:', index);
         return currentDesign;
       }
 
@@ -182,7 +178,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
   const removeLine = useCallback((index: number) => {
     setDesign(currentDesign => {
       if (currentDesign.lines.length <= 1) {
-        console.log('Cannot remove last line');
         return currentDesign;
       }
 
@@ -442,19 +437,15 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
   // Generate preview using Canvas API
   const generatePreview = useCallback(() => {
     if (!product) {
-      console.log('No product available for preview');
       return null;
     }
 
     try {
-      console.log('Generating preview for:', product.name, 'with design:', design);
-
       // Create canvas element
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
       
       if (!ctx) {
-        console.error('Could not get canvas context');
         return null;
       }
       
@@ -591,8 +582,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
         design.lines.forEach((line, index) => {
           if (!line.text || line.text.trim() === '') return;
           
-          console.log(`Drawing line ${index}:`, line);
-
           // Set font properties
           const fontSize = line.fontSize || 12;
           const fontFamily = line.fontFamily || 'Arial';
@@ -611,7 +600,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
             const x = centerX + ((line.xPosition || 0) * 1.5);
             const y = centerY + ((line.yPosition || 0) * 1.5);
             
-            console.log(`Drawing text "${line.text}" at position (${x}, ${y})`);
             ctx.fillText(line.text, x, y);
           }
         });
@@ -619,11 +607,9 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
       
       // Convert to data URL
       const dataUrl = canvas.toDataURL('image/png');
-      console.log('Preview generated successfully');
       return dataUrl;
       
     } catch (error) {
-      console.error('Error generating preview:', error);
       return null;
     }
   }, [design, product, renderCurvedText]);
@@ -641,7 +627,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
       
       return preview;
     } catch (error: any) {
-      console.error('Preview generation error:', error);
       setPreviewError(error.message);
       return null;
     }
@@ -649,14 +634,12 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
 
   // Force preview update function for debugging
   const forceUpdatePreview = useCallback(() => {
-    console.log('Forcing preview update...');
     const preview = generatePreviewSafe();
     setPreviewImage(preview);
   }, [generatePreviewSafe]);
 
   // Update preview whenever design changes
   useEffect(() => {
-    console.log('Design changed, updating preview...');
     const preview = generatePreviewSafe();
     setPreviewImage(preview);
   }, [design, generatePreviewSafe]);
@@ -680,7 +663,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
     try {
       localStorage.setItem(`stamp-design-${product.id}`, JSON.stringify(design));
     } catch (error) {
-      console.error('Error saving design:', error);
     }
   }, [design, product]);
 
@@ -693,7 +675,6 @@ export const useStampDesigner = (product: Product | null): UseStampDesignerRetur
         setDesign(parsedDesign);
       }
     } catch (error) {
-      console.error('Error loading design:', error);
     }
   }, [product]);
 

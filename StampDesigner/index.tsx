@@ -32,8 +32,6 @@ const StampDesigner: React.FC<StampDesignerProps> = ({
       
       // Track the design session start
       trackEvent('stamp_design', 'session_start', product.id);
-
-      console.log('StampDesigner initialized with product:', product.name);
     }
   }, [product, t]);
 
