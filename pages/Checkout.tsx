@@ -90,6 +90,7 @@ const Checkout = () => {
   };
 
   const handleFormSubmit = async (data: CheckoutData) => {
+    console.log('Form submitted:', data);
     try {
       // Generate a random order ID (in a real app, this would come from the backend)
       const newOrderId = `ORD-${Math.floor(Math.random() * 10000000)}`;
@@ -99,6 +100,7 @@ const Checkout = () => {
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Send confirmation email (this would be handled by a backend service)
+      console.log('Sending confirmation email to:', data.email);
       
       // Clear the cart and set order as confirmed
       clearCart();
@@ -124,6 +126,7 @@ const Checkout = () => {
         } 
       });
     } catch (error) {
+      console.error('Error placing order:', error);
       toast.error("There was a problem placing your order. Please try again.");
     }
   };

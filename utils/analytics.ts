@@ -7,6 +7,7 @@
  * @param title The page title
  */
 export function trackPageView(page: string, title: string) {
+  console.log(`Page view tracked: ${page} - ${title}`);
   // Here you would implement your actual analytics tracking
   // Example: gtag('config', 'GA-TRACKING-ID', { page_path: page, page_title: title });
 }
@@ -18,6 +19,7 @@ export function trackPageView(page: string, title: string) {
  * @param label Optional label for additional context
  */
 export function trackEvent(category: string, action: string, label: string = '') {
+  console.log(`Event tracked: ${category} - ${action} - ${label}`);
   // Here you would implement your actual analytics tracking
   // Example: gtag('event', action, { event_category: category, event_label: label });
 }
@@ -28,6 +30,7 @@ export function trackEvent(category: string, action: string, label: string = '')
  * @param data The product data
  */
 export function trackEcommerce(action: string, data: any) {
+  console.log(`Ecommerce event: ${action}`, data);
   // Example: gtag('event', action, { items: [data] });
 }
 
@@ -35,6 +38,7 @@ export function trackEcommerce(action: string, data: any) {
  * Initialize analytics service
  */
 export function initializeAnalytics() {
+  console.log('Analytics initialized');
   // Here you would implement your actual analytics initialization
   // Example: loading the analytics script and configuring it
 }

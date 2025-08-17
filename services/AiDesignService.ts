@@ -20,7 +20,9 @@ export class AiDesignService {
       // a trained model file. Instead, we'll simulate AI suggestions based on design rules.
       await tf.ready();
       this.modelLoaded = true;
+      console.log('AI design service initialized');
     } catch (error) {
+      console.error('Error initializing AI model:', error);
     }
   }
   
