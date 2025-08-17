@@ -51,6 +51,7 @@ const ProductCard = ({
             src={product.images[0]}
             alt={product.name}
             className="absolute inset-0 w-full h-full object-contain p-4"
+            loading="lazy"
           />
         )}
         

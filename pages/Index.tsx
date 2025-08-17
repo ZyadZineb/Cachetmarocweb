@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 import FeaturedProducts from '../components/FeaturedProducts';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import { Check, Truck, ThumbsUp, Award } from 'lucide-react';
+import { Check, Truck, ThumbsUp, Award, Phone, Mail, MapPin } from 'lucide-react';
 import { useMetaTags, generateOrganizationSchema } from '../utils/seo';
 
 const Index = () => {
@@ -138,6 +138,3 @@ const Index = () => {
 };
 
 export default Index;
-
-// Import necessary icons
-import { Phone, Mail, MapPin } from 'lucide-react';
